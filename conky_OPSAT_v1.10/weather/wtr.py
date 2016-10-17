@@ -8,10 +8,10 @@ import datetime
 
 now = datetime.datetime.now()
 wcr = pywapi.get_weather_from_weather_com('USIN0707')
-curcond_file = os.environ['HOME'] + '/.conky/weather/current_condition'
-forecast_file = os.environ['HOME'] + '/.conky/weather/forecast'
-icons_path = os.environ['HOME'] + '/.conky/weather/weather_icons/'
-_icons_path = os.environ['HOME'] + '/.conky/weather/weather_icons/'
+curcond_file = os.environ['HOME'] + '/.config/conky/dnd/weather/current_condition'
+forecast_file = os.environ['HOME'] + '/.config/conky/dnd/weather/forecast'
+icons_path = os.environ['HOME'] + '/.config/conky/dnd/weather/weather_icons/'
+_icons_path = os.environ['HOME'] + '/.config/conky/dnd/weather/weather_icons/'
 
 cur_cond = wcr['current_conditions']
 forcast = wcr['forecasts']
@@ -82,8 +82,8 @@ for elements in forcast:
     days.append(elements['day_of_week'].upper()[:2])
     high.append(elements['high'] + '°')
     lows.append(elements['low'])
-    cond.append(os.environ['HOME'] + '/.conky/weather/weather_icons/day/' + elements['day']['text'].lower().replace(' ', '') + '.png')
-    cond[0] = os.environ['HOME'] + '/.conky/weather/weather_icons/day/' + wtr['TXT'] + '.png'
+    cond.append(os.environ['HOME'] + '/.config/conky/dnd/weather/weather_icons/day/' + elements['day']['text'].lower().replace(' ', '') + '.png')
+    cond[0] = os.environ['HOME'] + '/.config/conky/dnd/weather/weather_icons/day/' + wtr['TXT'] + '.png'
 
 
 forecasts_ready.update({'days': days, 'highs': high, 'lows': lows, 'cond': cond})

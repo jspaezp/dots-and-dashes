@@ -1,5 +1,5 @@
 conky.config = {
-    update_interval=1,
+    update_interval=60,
     background=true,
     text_buffer_size=2048,
     double_buffer=true,
@@ -20,7 +20,7 @@ conky.config = {
 	default_shade_color = 'black',
 	alignment = 'top_right',
 	gap_x = 55,
-	gap_y = 340,
+	gap_y = 240,
 	minimum_width = 160, minimum_height = 350,
 	maximum_width = 160,
 	color3 = '#494a5b',
