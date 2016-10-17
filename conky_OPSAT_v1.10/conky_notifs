@@ -1,6 +1,6 @@
 conky.config = {
     update_interval=1,
-    background=false,
+    background=true,
     text_buffer_size=2048,
     double_buffer=true,
     no_buffers=true,
@@ -9,7 +9,7 @@ conky.config = {
     draw_shades=false,
     override_utf8_locale=true,
     own_window=true,
-    own_window_type='normal',
+    own_window_type='override',
     own_window_class='Conky',
     own_window_transparent=true,
     own_window_hints='undecorated,below,sticky,skip_taskbar,skip_pager',
@@ -27,8 +27,8 @@ conky.config = {
 
 conky.text = [[
 
-${execp $XDG_CONFIG_HOME/conky/dnd/whatsapp_proc_check.sh}
-${image $XDG_CONFIG_HOME/conky/dnd/Notifs.png -s 40x40 -p 155,35 -n}
+${execp ~/.config/conky/dnd/whatsapp_proc_check.sh}
+${image ~/.config/conky/dnd/Notifs.png -s 40x40 -p 155,35 -n}
 ${voffset -3}${goto 230}${font DIN:pixelsize=30}${execp cat /tmp/wa_notifications | head -n 1 | awk '{print $2}'}${font}
 ${voffset -30}${execp cat /tmp/wa_notifications | tail -n +2}
 ]];

@@ -7,7 +7,7 @@ import re
 import datetime
 
 now = datetime.datetime.now()
-wcr = pywapi.get_weather_from_weather_com('ITUM1307')
+wcr = pywapi.get_weather_from_weather_com('USIN0707')
 curcond_file = os.environ['HOME'] + '/.conky/weather/current_condition'
 forecast_file = os.environ['HOME'] + '/.conky/weather/forecast'
 icons_path = os.environ['HOME'] + '/.conky/weather/weather_icons/'
