@@ -24,9 +24,9 @@ conky.config = {
 };
 
 conky.text = [[
-${color 494a5b}${execp cat /home/$USER/.conky/.shitstodo | sed 's/^/├─ /'}
+${color 494a5b}${execp cat $XDG_CONFIG_HOME/conky/dnd/.shitstodo | sed 's/^/├─ /'}
 └─────────────────────────────────────────────────────${color}
 
-#${color darkcyan}${execpi 1800 python3 /home/$USER/.conky/calendar/pycal.py -t}${color}
-${execpi 1800 python3 /home/$USER/.conky/calendar/pycal.py -t}
+#${color darkcyan}${execpi 1800 python3 $XDG_CONFIG_HOME/conky/dnd/calendar/pycal.py -t}${color}
+${execpi 1800 python3 $XDG_CONFIG_HOME/conky/dnd/calendar/pycal.py -t}
 ]];
